@@ -375,7 +375,7 @@ func ensureOIDCIdPIAM(ctx context.Context, clt IdPIAMConfigureClient, req IdPIAM
 	// For S3 bucket setups the thumbprint is ignored, but the API still requires a parseable one.
 	// https://github.com/aws-actions/configure-aws-credentials/issues/357#issuecomment-1626357333
 	// We pass this dummy one for those scenarios.
-	thumbprint := "afafafafafafafafafafafafafafafafafafafaf"
+	thumbprint := "dummy-thumbprint-unused"
 
 	// For set ups that use the ProxyPublicAddress, we still calculate the thumbprint.
 	if req.ProxyPublicAddress != "" {
